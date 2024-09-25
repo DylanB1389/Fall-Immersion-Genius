@@ -1,3 +1,29 @@
-function modelPopUp() {
-    // Your code here.
-}   
+// Get modal element 
+const modal = document.getElementById("myModal");
+
+// Get buttons
+const openModalBtn = document.getElementById("openModalBtn");
+const closedModalBtn = document.getElementById("closedModalBtn");
+const alertBtn = document.getElementById("alertBtn");
+
+// Open modal on button click
+openModalBtn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// Close modal on close button click
+closedModalBtn.onclick = function() {
+    modal.style.display = "none";
+}
+
+// Close modal on outside click
+window.onclick = function(event) {
+    if (event.targetv === modal) {
+        modal.style.display = "none";
+    }
+}
+
+// Show alert on button click 
+alertBtn.onclick = function() {
+    alert("This is a simple alert. erm what da sigma 👻")
+}
