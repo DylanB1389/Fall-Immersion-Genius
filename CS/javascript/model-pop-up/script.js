@@ -3,7 +3,7 @@ const modal = document.getElementById("myModal");
 
 // Get buttons
 const openModalBtn = document.getElementById("openModalBtn");
-const closedModalBtn = document.getElementById("closedModalBtn");
+const closedModalBtn = document.getElementById("closeModalBtn");
 const alertBtn = document.getElementById("alertBtn");
 
 // Open modal on button click
@@ -12,13 +12,13 @@ openModalBtn.onclick = function() {
 }
 
 // Close modal on close button click
-closedModalBtn.onclick = function() {
+closeModalBtn.onclick = function() {
     modal.style.display = "none";
 }
 
 // Close modal on outside click
 window.onclick = function(event) {
-    if (event.targetv === modal) {
+    if (event.target === modal) {
         modal.style.display = "none";
     }
 }
